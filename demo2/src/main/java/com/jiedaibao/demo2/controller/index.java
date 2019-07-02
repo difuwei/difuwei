@@ -1,18 +1,15 @@
-package com.jiedaibao.demo1.controller;
+package com.jiedaibao.demo2.controller;
 
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import com.jiedaibao.demo2.entity.User;
+import com.jiedaibao.demo2.service.UserService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jiedaibao.demo1.entity.User;
-import com.jiedaibao.demo1.service.UserService;
-
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @RequestMapping("/index")
@@ -42,11 +39,14 @@ public class index {
 
     }
 
-    @RequestMapping(value = "/insert", method = RequestMethod.POST)
+    //限定请求方法 method
+//    @RequestMapping(value = "/insert", method = RequestMethod.POST)
+    @RequestMapping(value = "/insert")
     public User insert(User user) {
         return userservice.insertUser(user);
     }
 
+    //请求地址 http://localhost:8080/index/ListUser
     @RequestMapping("/ListUser")
     @ResponseBody
     public List<User> ListUser(){

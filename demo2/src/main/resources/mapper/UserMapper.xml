@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC
         "-//mybatis.org//DTD com.example.Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jiedaibao.demo1.mapper.UserMapper">
-    <resultMap id="result" type="com.jiedaibao.demo1.entity.User">
+<mapper namespace="com.jiedaibao.demo2.mapper.UserMapper">
+    <resultMap id="result" type="com.jiedaibao.demo2.entity.User">
         <result property="name" column="name" />
         <result property="password" column="password" />
         <result property="number" column="number"/>
@@ -22,7 +22,7 @@
 		SELECT * FROM user where name=#{name}
 	</select>
 
-    <insert id="insertUser" parameterType="com.jiedaibao.demo1.entity.User"
+    <insert id="insertUser" parameterType="com.jiedaibao.demo2.entity.User"
             keyProperty="id" useGeneratedKeys="true">
 		INSERT INTO user
 		(
@@ -40,7 +40,7 @@
 		delete from user where id=#{id}
 	</delete>
 
-    <update id="Update" parameterType="com.jiedaibao.demo1.entity.User">
+    <update id="Update" parameterType="com.jiedaibao.demo2.entity.User">
 	update user set user.name=#{name},user.password=#{password},user.number=#{number} where user.id=#{id}
 	</update>
 </mapper>

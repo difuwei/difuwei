@@ -1,4 +1,4 @@
-package com.jiedaibao.demo1.entity;
+package com.jiedaibao.demo2.entity;
 
 import lombok.Data;
 

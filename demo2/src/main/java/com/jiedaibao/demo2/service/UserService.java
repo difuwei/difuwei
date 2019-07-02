@@ -1,15 +1,12 @@
-package com.jiedaibao.demo1.service;
+package com.jiedaibao.demo2.service;
 
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import com.jiedaibao.demo2.entity.User;
+import com.jiedaibao.demo2.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 
-import com.jiedaibao.demo1.entity.User;
-import com.jiedaibao.demo1.mapper.UserMapper;
-
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class UserService {
